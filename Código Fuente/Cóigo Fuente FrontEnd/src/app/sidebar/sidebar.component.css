@@ -1,0 +1,22 @@
+.example-container {
+  min-height: 100vh;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 5px;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.div_listar{
+  display: none;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

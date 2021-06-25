@@ -1,0 +1,82 @@
+
+
+<br>
+<div style="font-size: large;">
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div *ngIf="!load" role="status">
+        <mat-spinner></mat-spinner>
+      </div>
+      <div *ngIf="load" class="col-md-6 col-lg-4">
+        <div  class="login-wrap py-5">
+          <h3 class="text-center mb-0">Agregar usuario</h3>
+          <br>
+
+          <form [formGroup]="form" (ngSubmit)="onSubmit()" class="example-form">
+
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label for="correo" >Correo</mat-label>
+                <input matInput formControlName="correo" type="email" placeholder="User@gmail.com" >
+              </mat-form-field>
+
+              <div class="alert-danger" *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+                <div class="container-error-message" *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+                  el correo es requerido.
+                </div>
+              <div class="container-error-message" *ngIf="(correo.dirty || correo.touched) && correo.invalid && correo.errors.pattern">
+                ingrese un correo válido.
+              </div>
+            </div>
+            </div>
+<hr>
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label for="exampleInputPassword1">Contraseña</mat-label>
+                <input matInput formControlName="password" type="password" placeholder="**********" >
+              </mat-form-field>
+
+              <div class="alert-danger"  *ngIf="password.invalid && (password.dirty || password.touched)">
+                <div class="container-error-message"  *ngIf="password.errors.required">
+                  la contraseña es requerida.
+                </div>
+                <div class="container-error-message"  *ngIf="password.errors.minlength">
+                  la contraseña debe tener mínimo 8 caracteres.
+                </div>
+              </div>
+            </div>
+<hr>
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="example-full-width" >
+                <mat-label for="exampleInputPassword1">Confirmar contraseña</mat-label>
+                <input matInput formControlName="password2" type="password" placeholder="**********" >
+              </mat-form-field>
+              <div class="alert-danger" *ngIf="(password2.dirty || password2.touched)">
+                <div class="container-error-message" *ngIf="form.value.password2 != form.value.password">
+                  las contraseñas no coinciden.
+                </div>
+              </div>
+            </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1" style="padding: 10px;">Rol </label>
+                <select formControlName="rol">
+                  <option value="1">Gerente</option>
+                  <option value="2">Personal de cocina</option>
+                </select>
+              </div>
+
+            <div class="form-group">
+              <button type="submit" [disabled]="!(form.valid && (form.value.password == form.value.password2))" class="btn form-control btn-warning rounded submit px-3" id="diniciar" style="font-size: 25px;" >Registrar</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+

@@ -1,0 +1,27 @@
+Nombre del equipo: Hello World
+Título del proyecto: ComApp
+Ficha: ADSI 2062287
+
+Datos de los aprendices:
+
+Aprendiz Michael Giraldo Bañol
+N° Cédula: 1004870802
+Correo: michaelgiraldo40@gmail.com
+Teléfono: 3012672710
+
+Aprendiz Juan Camilo Leiton Ocampo
+N° Cédula: 1004916919
+Correo: leitonnjuann@gmail.com
+Teléfono: 3103415944
+
+Aprendiz Andrés Felipe Taborda Sánchez
+N° Cédula: 1004961465
+Correo: aftaborda.s@gmail.com
+Teléfono: 3052325917
+
+
+Aprendiz Julián Daniel Sabogal Cabrera
+N° Cédula: 1007157641
+correo: juliansabogal116@gmail.com
+Teléfono: 3006630118
+
